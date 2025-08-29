@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main Wrapper */
+.wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 600px;
+  max-width: 95%;
+}
+
+/* Title */
+.wrapper h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffd369;
+  text-shadow: 0px 0px 10px rgba(255, 211, 105, 0.8);
+}
+
+/* Search Box */
+.search-box {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+#movieInput {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 12px;
+  outline: none;
+  color: #333;
+}
+
+#recommendBtn {
+  width: 100%;
+  padding: 14px;
+  font-size: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #ffd369;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#recommendBtn:hover {
+  background: #ffb347;
+}
+
+/* Dropdown */
+.dropdown {
+  background: #fff;
+  color: #333;
+  list-style: none;
+  margin: 5px 0 0;
+  padding: 0;
+  max-height: 200px;
+  font-size: 12px;
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+.dropdown li {
+  padding: 12px 18px;
+    text-align: left;  
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown li:hover {
+  background: #ffd369;
+  color: #111;
+}
+
+/* Recommendations Grid */
+.recommendations {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.recommendations h3 {
+  margin-bottom: 12px;
+  color: #ffd369;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 11px;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(.9);
+}
+.search-container {
+  position: relative; /* dropdown absolute inside this container */
+  width: 100%;
+  margin-bottom: 20px;
+}
+#movieList {
+  position: absolute;
+  top: 100%;   /* just below input */
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 1000;
+}
+

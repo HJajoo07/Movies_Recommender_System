@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎬 Movie Recommendation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+  <h1>🎬 Movie Recommendation</h1>
+
+  <!-- Search container -->
+  <div class="search-container">
+    <input type="text" id="movieInput" placeholder="Search a movie..." oninput="filterMovies()">
+    <ul id="movieList" class="dropdown"></ul>
+  </div>
+
+  <!-- Button below the search container -->
+  <button id="recommendBtn">Get Recommendations</button>
+
+  <div class="recommendations" id="results"></div>
+</div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
