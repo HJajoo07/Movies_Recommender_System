@@ -1,4 +1,4 @@
-const backendUrl = "http://127.0.0.1:5000";
+const backendUrl = "https://movies-recommender-system-h8b2.onrender.com";
 let allMovies = [];
 
 // Load all movies
